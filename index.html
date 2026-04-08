@@ -1,44 +1,443 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="description"
+        content="From Vision to Interaction: Evaluating Dynamic Social Intelligence of VLM Agents in ALIVE-World">
+  <meta name="keywords" content="Social Intelligence, Dynamic Interaction, Evaluation Benchmark, Simulated Environment, VLM Agents">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>From Vision to Interaction: Evaluating Dynamic Social Intelligence of VLM Agents in ALIVE-World</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      text-align: center;
-      padding: 20px;
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
     }
-    h1 {
-      font-size: 24px;
-      max-width: 800px;
-    }
-    .anonymous-tag {
-      color: #e74c3c;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-    .notice {
-      color: #666;
-    }
-  </style>
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 <body>
 
-  <div class="anonymous-tag">Anonymous Project Page</div>
-  
-  <h1>From Vision to Interaction: Evaluating Dynamic Social Intelligence of VLM Agents in ALIVE-World</h1>
-  
-  <p class="notice">Supplementary materials and demo videos will be available here.</p>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">From Vision to Interaction: Evaluating Dynamic Social Intelligence of VLM Agents in ALIVE-World</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Anonymous</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <figure class="image">
+        <img id="teaser" src="./static/images/system_overview.png" alt="System overview">
+      </figure>
+      <h2 class="subtitle has-text-centered">
+        The overall architecture of the ALIVE framework. (Left) <span class="alive-sc">ALIVE-World</span>: An egocentric simulated environment
+supporting dynamic multimodal interactions, populated with counterpart agents driven by a profile-conditioned, dual-system architecture. (Right) <span class="alive-sc">ALIVE-Bench</span>: An evaluation framework
+that assesses the evaluated VLM agents' social intelligence across a
+hierarchical benchmark encompassing four critical dimensions: Perception, Understanding, Influence, and Outcome.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section section-gray">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            As AI agents are increasingly deployed in real-world applications and take on social roles, dynamic social intelligence, the ability to continuously perceive multimodal cues, infer latent cognitive states, intervene through embodied actions, and ultimately achieve social goals, has become essential. 
+However, existing evaluations largely fragment social intelligence into text-based abstractions, static reasoning tasks, or embodied simulators that lack social dynamics. 
+These approaches fail to capture the multimodal, continuous, and interpersonal complexity of authentic human interactions. 
+To bridge this gap, we introduce <b><span class="alive-sc">ALIVE-World</span></b>, an embodied simulation environment supporting dynamic multimodal interactions encompassing egocentric vision, language, and non-verbal action. 
+To provide socially grounded interactive feedback, we populate this environment with <b>counterpart agents</b> driven by a profile-conditioned, dual-system (intuitive-affective and logical-cognitive) architecture. 
+Building upon this platform, we propose <b><span class="alive-sc">ALIVE-Bench</span></b> to transform the assessment of social intelligence into a trackable quantitative framework. 
+By deeply leveraging underlying environmental states and agents' internal variables, <span class="alive-sc">ALIVE-Bench</span> systematically evaluates Vision-Language Model (VLM) agents across four critical dimensions: perception, understanding, influence, and outcome. 
+<b>Extensive evaluations</b> reveal that dynamic social intelligence is fundamentally multi-dimensional and scenario-dependent. 
+We identify a critical bottleneck between upstream perception and downstream social intervention, exposing VLM vulnerabilities in fine-grained proxemic awareness, adaptive intervention, and multi-party coordination. 
+By uncovering these limitations and the diverse interaction strategies they produce, this benchmark provides actionable insights for the future behavioral alignment of multimodal agents.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"><span class="alive-sc">ALIVE-World</span>: Counterpart Agents</h2>
+        <div class="content has-text-justified">
+          <p>
+            In <span class="alive-sc">ALIVE-World</span>, counterpart agents are embodied avatars driven by a dual-system architecture. The following demos illustrate how the intuitive-affective
+            pathway and the logical-cognitive pathway jointly shape socially grounded behaviors in the
+            Shopping and LGD scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-fluid">
+    <div class="columns is-variable is-4">
+      <div class="column is-half">
+        <video controls playsinline width="100%">
+          <source src="./static/videos/counterpart_in_shopping.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered" style="margin-top: 0.75rem;">
+          <b>Shopping scenario</b> from the perspective of Customer. A counterpart customer driven by the dual-system architecture,
+          with affective reactions and cognitive deliberation jointly shaping the interaction.
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video controls playsinline width="100%">
+          <source src="./static/videos/counterpart_in_lgd.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered" style="margin-top: 0.75rem;">
+          <b>LGD scenario</b> from the perspective of Discussant_B. A counterpart discussant driven by the dual-system architecture,
+          with affective reactions and cognitive deliberation jointly shaping the interaction.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"><span class="alive-sc">ALIVE-Bench</span>: Evaluated Agent</h2>
+        <div class="content has-text-justified">
+          <p>
+            In <span class="alive-sc">ALIVE-Bench</span>, the evaluated agent explicitly outputs its reasoning
+  process before executing embodied actions. The following demos illustrate how the agent proceeds
+  from perception and understanding to strategy formation and action selection in dynamic social
+  interaction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-fluid">
+    <div class="columns is-variable is-4">
+      <div class="column is-half">
+        <video controls playsinline width="100%">
+          <source src="./static/videos/evaluated_in_shopping.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered" style="margin-top: 0.75rem;">
+          <b>Shopping scenario</b> from the perspective of Seller. The evaluated agent’s reasoning process from visual perception
+          and user-state inference to social strategy and action selection.
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video controls playsinline width="100%">
+          <source src="./static/videos/evaluated_in_lgd.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered" style="margin-top: 0.75rem;">
+          <b>LGD scenario</b> from the perspective of Discussant_T. The evaluated agent’s reasoning process in multi-party discussion,
+          including social cue interpretation, stance inference, and intervention planning.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-gray">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Main Quantitative Results</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We evaluate 12 frontier VLMs on <span class="alive-sc">ALIVE-Bench</span> across two socially grounded scenarios:
+            <b>Shopping</b> and <b>Leaderless Group Discussion (LGD)</b>.
+            The results reveal that dynamic social intelligence is not a single monolithic capability,
+            but a structured combination of perception, understanding, influence, and outcome.
+          </p>
+
+          <ol>
+            <li>
+              <b>Dynamic social intelligence is inherently multi-dimensional.</b>
+              Strong performance at one level does not imply overall superiority.
+              For example, some models lead in upstream perception and understanding,
+              while others are stronger in downstream persuasion and final task outcome.
+            </li>
+            <li>
+              <b>There is a clear perception-to-outcome bottleneck.</b>
+              Robust visual grounding does not automatically translate into effective social intervention.
+              Several models show acceptable perception scores but still struggle to build rapport,
+              persuade others, or achieve desirable final outcomes.
+            </li>
+            <li>
+              <b>Model proficiencies are highly scenario-dependent.</b>
+              Shopping and LGD stress different aspects of social intelligence.
+              In particular, LGD poses a much stricter test of fine-grained micro-social perception,
+              especially gaze-target identification and multi-party coordination.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-fluid">
+    <div class="columns is-centered is-variable is-4">
+      <div class="column is-half">
+        <figure class="image">
+          <img
+            src="./static/images/main_result_shopping.png"
+            alt="Main quantitative results on the Shopping scenario"
+            style="width: 100%; height: auto;"
+          >
+        </figure>
+        <p class="has-text-centered">
+          <b>Figure.</b> Main quantitative results on the <b>Shopping</b> scenario.
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <figure class="image">
+          <img
+            src="./static/images/main_result_lgd.png"
+            alt="Main quantitative results on the Leaderless Group Discussion scenario"
+            style="width: 100%; height: auto;"
+          >
+        </figure>
+        <p class="has-text-centered">
+          <b>Figure.</b> Main quantitative results on the <b>Leaderless Group Discussion (LGD)</b> scenario.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Complete Interaction Examples in Different Scenarios</h2>
+        <div class="content has-text-justified">
+          <p>
+            We further present two complete interaction demos in <span class="alive-sc">ALIVE</span>,
+            covering the Shopping and Leaderless Group Discussion (LGD) scenarios. These full episodes
+            illustrate how the evaluated agent interacts with counterpart agents over an extended trajectory,
+            and how social understanding, intervention, and final outcomes unfold in dynamic embodied settings.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-fluid">
+    <div class="columns is-variable is-4">
+      <div class="column is-half">
+        <video controls playsinline width="100%">
+          <source src="./static/videos/full_shopping_interaction.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered" style="margin-top: 0.75rem;">
+          <b>Shopping scenario.</b> The customer is the counterpart agent and the seller is the evaluated
+          agent. Through the interaction, the seller successfully persuades the customer to purchase a shirt,
+          while the customer declines the recommendation of the trousers because they exceed the budget.
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video controls playsinline width="100%">
+          <source src="./static/videos/full_LGD_interaction.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered" style="margin-top: 0.75rem;">
+          <b>LGD scenario.</b> Discussant_A, Discussant_B, and Discussant_C are counterpart agents, while
+          Discussant_T is the evaluated agent. The group engages in an intense discussion on the topic:
+          “A resort hotel failed to meet its fourth-quarter profit target. Ten possible management problems
+          have been identified. Select the three
+          most important causes.” After resolving disagreements through discussion, the participants ultimately
+          reach a successful consensus.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-gray">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Failure Modes in Different Interaction Scenarios</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We further inspect representative failure cases to understand the concrete mechanisms
+            behind the quantitative gaps observed in <span class="alive-sc">ALIVE-Bench</span>. Below we present three typical
+            failure modes in different interaction scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">1. Breakdown from Perception and Understanding to Interaction Strategy</h3>
+        <video controls playsinline width="100%">
+          <source src="./static/videos/failure_mode_breakdown.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">
+          <b>Failure Mode 1.</b> The Seller driven by Qwen3-VL-32B-Instruct can recognize the counterpart’s state, but fails to turn
+          that understanding into a socially appropriate and effective interaction strategy. For example, she moves to an excessively close frontal position, and recommends a pink printed T-shirt that is misaligned with the customer’s self-presentation
+        </p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">2. Difficulty in Fine-Grained Gaze Perception</h3>
+        <video controls playsinline width="100%">
+          <source src="./static/videos/failure_mode_gaze.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">
+          <b>Failure Mode 2.</b> The Discussant_T driven by Claude-Opus-4.6 misinterprets subtle gaze directions. 
+          He misinterprets eye contact between Discussant_A and Discussant_B as attention directed toward himself,
+          which distorts downstream reasoning and interrupts others in a multi-party interaction.
+        </p>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">3. Coordination Failures in Multi-Party Interaction</h3>
+        <video controls playsinline width="100%">
+          <source src="./static/videos/failure_mode_coordination.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered">
+          <b>Failure Mode 3.</b> The Seller driven by o3 struggles to dynamically reallocate attention and coordinate
+          across multiple concurrently evolving counterparts. She sticks with Customer_A, waits idly outside the fitting room when Customer_A is changing without servicing others, 
+          causing Customer_B and Customer_C to leave.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Emergent Social Interaction Styles</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Beyond aggregate metric rankings, <span class="alive-sc">ALIVE-Bench</span> reveals that frontier VLMs exhibit
+            distinct recurrent interaction styles. The following examples show the beginning of
+            interaction histories when Gemini-3-Pro, GPT-5, and Claude-Opus-4.6 act as seller and face the same
+            customer in the Shopping scenario, illustrating their different social strategies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container is-fluid">
+    <div class="columns is-variable is-3">
+      <div class="column">
+        <h3 class="title is-5 has-text-centered">Gemini-3-Pro</h3>
+        <video controls playsinline width="100%">
+          <source src="./static/videos/gemini_shopping.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered" style="margin-top: 0.75rem;">
+          <b>Socially Attentive.</b> An adaptive, low-pressure style that follows the customer’s
+          natural exploration trajectory.
+        </p>
+      </div>
+
+      <div class="column">
+        <h3 class="title is-5 has-text-centered">GPT-5</h3>
+        <video controls playsinline width="100%">
+          <source src="./static/videos/gpt_shopping.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered" style="margin-top: 0.75rem;">
+          <b>Goal-Oriented.</b> A more decisive and directive style that pushes the sales interaction.
+        </p>
+      </div>
+
+      <div class="column">
+        <h3 class="title is-5 has-text-centered">Claude-Opus-4.6</h3>
+        <video controls playsinline width="100%">
+          <source src="./static/videos/opus_shopping.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered" style="margin-top: 0.75rem;">
+          <b>Logic-Driven.</b> A structured and credibility-oriented style that responds with
+          adaptive recommendations and reasoned justifications.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
